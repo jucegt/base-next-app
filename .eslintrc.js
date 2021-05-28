@@ -53,7 +53,7 @@ module.exports = {
   },
   'overrides': [
     {
-      'files': ['src/*.ts', 'src/*.tsx']
+      'excludedFiles': ['next-env.d.ts']
     }
   ]
 };
