@@ -1,0 +1,49 @@
+{
+  "name": "base-next-app",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:jucegt/base-next-app.git",
+  "author": "jucegt <contact@juliopalencia.me>",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "prepare": "husky install",
+    "type-check": "tsc --pretty --noEmit",
+    "lint": "eslint --ext=ts,tsx --quiet --fix --max-warnings=0",
+    "format": "prettier --write \"**/*.{ts,tsx}\""
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "yarn format",
+      "yarn lint"
+    ]
+  },
+  "dependencies": {
+    "next": "latest",
+    "preact": "^10.5.13",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.21",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "@types/styled-components": "^5.1.9",
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.0",
+    "typescript": "4.0"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "license": "MIT"
+}
