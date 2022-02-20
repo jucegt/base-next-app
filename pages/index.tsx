@@ -8,7 +8,7 @@ const Home: React.FC = () => {
         This is the <b>home page</b>
       </p>
       <p>
-        edit on <strong>./src/pages/index.tsx</strong>
+        edit on <strong>./pages/index.tsx</strong>
       </p>
     </>
   );
