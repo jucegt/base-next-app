@@ -1,5 +1,5 @@
 {
-  "printWidth": 120,
+  "printWidth": 80,
   "trailingComma": "es5",
   "useTabs": false,
   "tabWidth": 2,
@@ -8,6 +8,5 @@
   "arrowParens": "always",
   "quoteProps": "consistent",
   "bracketSpacing": true,
-  "endOfLine": "auto",
-  "parser": "typescript"
+  "endOfLine": "auto"
 }

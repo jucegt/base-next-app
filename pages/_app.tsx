@@ -1,13 +1,10 @@
 // Packages
-import React from 'react';
+import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 
-// Definitions
-import { AppProps } from 'next/app';
-
 // Styles
-import GlobalStyle from '@theme/global';
 import DefaultTheme from '@theme/default';
+import GlobalStyle from '@theme/global';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (

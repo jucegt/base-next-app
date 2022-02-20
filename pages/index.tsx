@@ -2,6 +2,7 @@
 import React from 'react';
 
 const Home: React.FC = () => {
+  console.log('lint test');
   return (
     <>
       <p>

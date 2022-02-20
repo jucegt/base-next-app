@@ -1,6 +1,6 @@
 {
   "name": "base-next-app",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "index.js",
   "repository": "git@github.com:jucegt/base-next-app.git",
   "author": "jucegt <contact@juliopalencia.me>",
@@ -8,39 +8,44 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "prepare": "husky install",
-    "type-check": "tsc --pretty --noEmit",
-    "lint": "eslint --ext=ts,tsx --quiet --fix --max-warnings=0",
-    "format": "prettier --write \"**/*.{ts,tsx}\""
+    "lint": "next lint --fix --max-warnings=0",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json}\"",
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit"
   },
-  "lint-staged": {
-    "*.@(ts|tsx)": [
-      "yarn format",
-      "yarn lint"
-    ]
-  },
+  "pre-commit": [
+    "format",
+    "lint",
+    "type-check"
+  ],
   "dependencies": {
-    "next": "latest",
+    "next": "^12.1.0",
     "preact": "^10.5.13",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "styled-components": "^5.3.0"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^12.1.0",
     "@types/node": "^12.12.21",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
     "@types/styled-components": "^5.1.9",
-    "@typescript-eslint/eslint-plugin": "^4.25.0",
-    "@typescript-eslint/parser": "^4.25.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
     "eslint": "^7.27.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.23.2",
-    "husky": "^6.0.0",
-    "lint-staged": "^11.0.0",
+    "eslint-config-next": "^12.1.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-import-resolver-webpack": "^0.13.2",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "pre-commit": "^1.2.2",
     "prettier": "^2.3.0",
-    "typescript": "4.0"
+    "stylelint": "^14.5.1",
+    "stylelint-config-recommended": "^7.0.0",
+    "stylelint-prettier": "^2.0.0",
+    "typescript": "^4.5.5"
   },
   "engines": {
     "node": ">=14"
